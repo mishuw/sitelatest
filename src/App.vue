@@ -46,7 +46,7 @@
 <div id="display">
       <div id="work">
      
-        <h1 align="center">Katılsana Ya</h1>
+        <h1>Katılsana Ya</h1>
         <div class="dcBody">
     <div class="ınviteBody">
         <div class="ınvite" style="width: 400px;">
