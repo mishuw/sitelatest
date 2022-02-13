@@ -55,5 +55,5 @@ function update_presence() {
     document.getElementById("spotify").innerHTML = `<i class="fab fa-spotify text-gray-500 ml-1"></i> Şuan Dinlemiyor.`;
   }
   document.getElementById('avatar-sec').setAttribute("style", "background: url(https://cdn.discordapp.com/avatars/"+dscdata.d.discord_user.id+"/"+dscdata.d.discord_user.avatar+"?size=4096) center;");
-  document.getElementById('username').innerHTML = `${dscdata.d.discord_user.username}#${dscdata.d.discord_user.discriminator}`
+  document.getElementById('username').innerHTML = `${dscdata.d.discord_user.username}<span class="discrim">#${dscdata.d.discord_user.discriminator}</span>`
 }
