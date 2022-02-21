@@ -45,8 +45,19 @@
 
 <div id="display">
       <div id="work">
+      
+      <h1 style="color: #5865F2;">Hakkımda</h1>
+      <p class="text">Merhaba ben mishu. Genellikle özel projeler yapıyorum, açık kaynaklı projelerimde mevcut bunlara <a href="https://github.com/mishuw" class="link">GitHub</a> adresimden ulaşabilirsin.</p>
+      
+      <div align="center" class="bot">
+        <img class="botImg" draggable="false" src="https://cdn.discordapp.com/avatars/945382049659887657/892b1452788f9b38276043ea493b8492.png?size=4096">
+        <div class="botName">
+        <p>Mishu</p><p class="discrim">#0081</p>
+        </div>
+        <p class="botDesc">Şu anda Discord'da bir bot geliştiriyorum bana yardım etmek için <a href="https://crwd.in/mishu-bot">çevirebilirsin</a></p>
+      </div>
      
-        <h1>Katılsana Ya</h1>
+        <h1 style="color: #EB459E;">Katılsana Ya</h1>
         <div class="dcBody">
     <div class="ınviteBody">
         <div class="ınvite" style="width: 400px;">
