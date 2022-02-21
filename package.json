@@ -11,7 +11,8 @@
     "@eggsydev/vue-lanyard": "^1.1.3",
     "@vue/cli-plugin-babel": "4.1.1",
     "postscribe": "^2.0.8",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "4.1.1",
