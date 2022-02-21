@@ -542,3 +542,32 @@ a {
     width: 88%;
 }
 }
+.botImg {
+    width: 45px !important;
+    height: 45px !important;
+    display: inline-block !important;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.botDesc {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+.botName {
+    font-weight: 220!important;
+    font-size: 22px!important;
+    margin-left: 10px!important;
+    top: 0!important;
+    display: inline-block !important;
+    vertical-align: middle;
+    font-size: 20px;
+}
+.botName p {
+    text-decoration: none !important;
+    display: inline-block;
+}
+.botName .discrim {
+    color: #b9bbbe;
+    display: inline-block;
+    font-size: 23px;
+}
