@@ -571,3 +571,7 @@ a {
     display: inline-block;
     font-size: 23px;
 }
+.text {
+    font-size: 18px;
+    color: rgba(156,163,175,1);
+}
