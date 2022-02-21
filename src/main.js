@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import App from "./App.vue";
 import Bot from "./Mishuwbot.vue";
 
+Vue.use(VueRouter);
 Vue.config.productionTip = false;
 
 const routers = [
