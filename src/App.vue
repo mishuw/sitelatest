@@ -13,7 +13,7 @@
 
     <div class="sxdfa susdl">
       <p class="sxdfa-text mbb">Ben Kimim ?</p>
-      <p class="sxdfa-text-min text-gray-300">Bem mishu! Geliştirdiğim projeleri falan <a class="link" target="_blank" href="https://github.com/eleventhe">GitHub</a> burada paylaşıyorum bu kadar.</p>
+      <p class="sxdfa-text-min text-gray-300">Bem mishu! Geliştirdiğim projeleri falan <a class="link" target="_blank" href="https://github.com/mishuw">GitHub</a> burada paylaşıyorum bu kadar.</p>
     </div><br>
 <div class="susdl">
   <p class="sxdfa-text"><span style="color: #EB459E;">Kullandığım Teknolojiler</span></p>
