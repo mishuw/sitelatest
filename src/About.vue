@@ -15,7 +15,7 @@
                     <div class="-mt-10 relative ml-4"><img class="border-[7px] rounded-full avatar-dc" width="85" src="https://cdn.mishudev.xyz/millie.jpg" alt=""></div>
                     <div class="mb-3">
                         <h1 class="ml-4 font-medium user-data text-xl mt-3">mishu<span class="text-lg text-gray-500">#6139</span></h1>
-                        <h4 class="text-sm ml-4 font-light text-black ac-status"></h4>
+                        <h4 class="text-sm ml-4 font-light text-gray ac-status"></h4>
                     </div>
                         <div class="flex">
                         <img width="80" class="rounded shadow-xl ac-img" src="" alt="">
