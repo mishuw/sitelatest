@@ -26,7 +26,7 @@
 }
 
 .spotify {
-    background-color: var(--dc-bg);
+    background-color: var(--status);
     color: var(--text-color);
 }
 .tech-text {
