@@ -63,7 +63,7 @@ function update_presence() {
     var artist = data.d.spotify.artist.split(';')[0].split(',')[0];
     var song = data.d.spotify.song.split('(')[0];
     document.querySelector('.spotify').style.display = ""
-    document.querySelector('.spotify').innerHTML = `<span class="ml-2 text-gray px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands fa-spotify text-gray mr-2"></i>Listening to <a href="https://open.spotify.com/track/${data.d.spotify.track_id}" target="_blank" class="text-white decoration_yh">${song}</a> — left ${spotify_time || "0m 0s"}</span>`
+    document.querySelector('.spotify').innerHTML = `<span class="ml-2 text-gray px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands fa-spotify text-gray mr-2"></i>Listening to <a href="https://open.spotify.com/track/${data.d.spotify.track_id}" target="_blank" class="text-color decoration_yh">${song}</a> <span class="text-color">— left ${spotify_time || "0m 0s"}</span></span>`
   }else {
     document.querySelector('.spotify').style.display = "none";
   }
