@@ -25,9 +25,11 @@
     --loader-bg: rgb(17, 17, 18);
 }
 
+.text-color {
+    color: var(--text-color);
+}
 .spotify {
     background-color: var(--status);
-    color: var(--text-color);
 }
 .tech-text {
     background-color: var(--back-text);
