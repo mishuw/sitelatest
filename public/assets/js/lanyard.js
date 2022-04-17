@@ -56,10 +56,14 @@ function update_presence() {
   }
   setInterval(function () {
   if(data.d.activities[0] && !data.d.listening_to_spotify) {
+    if(data.d.activities[0].name === 'Custom Status'){
+      document.querySelector('ac-status').innerText = data.d.activities[0].state;
+    }else {
     document.querySelector('.ac-name').innerText = data.d.activities[0].name || ``;
     document.querySelector('.ac-data').innerText = data.d.activities[0].details || ``;
     document.querySelector('.ac-data-2').innerText = data.d.activities[0].state || ``;
     document.querySelector('.ac-img').src = `${data.d.activities[0].assets.large_image ? `https://cdn.discordapp.com/app-assets/${data.d.activities[0].application_id}/${data.d.activities[0].assets.large_image}` : 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Heavy_red_"x".png'}`;
+    }
   }else if(data.d.listening_to_spotify) {
     var countDownDate = new Date(data.d.spotify.timestamps.end).getTime();
     var now = new Date().getTime();
