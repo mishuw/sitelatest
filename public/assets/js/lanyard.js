@@ -60,6 +60,8 @@ function update_presence() {
     document.querySelector('.ac-data').innerText = data.d.activities[0].details;
     document.querySelector('.ac-data-2').innerText = data.d.activities[0].state;
     document.querySelector('.ac-img').src = `https://cdn.discordapp.com/app-assets/${data.d.activities[0].application_id}/${data.d.activities[0].assets.large_image}`;
+  }else if(data.d.activities[0].name === 'Custom Status'){
+    document.querySelector('.ac-status').innerText = data.d.activities[0].state;
   }else if(data.d.listening_to_spotify) {
     var countDownDate = new Date(data.d.spotify.timestamps.end).getTime();
     var now = new Date().getTime();
