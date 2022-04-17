@@ -57,7 +57,7 @@ function update_presence() {
   setInterval(function () {
   if(data.d.activities[0] && !data.d.listening_to_spotify) {
     if(data.d.activities[0].name === 'Custom Status'){
-      document.querySelector('.ac-status').innerText = data.d.activities[0].state;
+      document.querySelector('.ac-status').innerHTML = data.d.activities[0].state;
     }else {
     document.querySelector('.ac-name').innerText = data.d.activities[0].name || ``;
     document.querySelector('.ac-data').innerText = data.d.activities[0].details || ``;
