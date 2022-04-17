@@ -55,16 +55,7 @@ function update_presence() {
     document.querySelector('.status-bg').innerHTML = `<span class="ml-2 text-offline px-2 py-1 font-normal rounded-md text-sm"><i class="fa fa-circle text-offline mr-2"></i>Offline</span>`
   }
   setInterval(function () {
-  if(data.d.activities[0] && !data.d.listening_to_spotify) {
-    if(data.d.activities[0].name === 'Custom Status'){
-      document.querySelector('.ac-status').innerHTML = data.d.activities[0].state;
-    }else {
-    document.querySelector('.ac-name').innerText = data.d.activities[0].name || ``;
-    document.querySelector('.ac-data').innerText = data.d.activities[0].details || ``;
-    document.querySelector('.ac-data-2').innerText = data.d.activities[0].state || ``;
-    document.querySelector('.ac-img').src = `${data.d.activities[0].assets.large_image ? `https://cdn.discordapp.com/app-assets/${data.d.activities[0].application_id}/${data.d.activities[0].assets.large_image}` : 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Heavy_red_"x".png'}`;
-    }
-  }else if(data.d.listening_to_spotify) {
+    if(data.d.listening_to_spotify) {
     var countDownDate = new Date(data.d.spotify.timestamps.end).getTime();
     var now = new Date().getTime();
     var distance = countDownDate - now;
@@ -73,11 +64,7 @@ function update_presence() {
     var spotify_time = minutes + "m " + seconds+ 's '
     var artist = data.d.spotify.artist.split(';')[0].split(',')[0];
     var song = data.d.spotify.song.split('(')[0];
-    document.querySelector('.ac-name').innerText = 'Spotify';
-    document.querySelector('.ac-data').innerText = song;
-    document.querySelector('.ac-data-2').innerText = artist;
-    document.querySelector('.ac-duration').innerText = spotify_time;
-    document.querySelector('.ac-img').src = `${data.d.spotify.album_art_url || 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Heavy_red_"x".png'}`;
+    document.querySelector('.spotify').innerHTML = <div class="spotify_section text-gray"><i class="fa-brands fa-spotify text-white mr-2"></i>Listening to <a href="https://open.spotify.com/track/${api.d.spotify.track_id}" target="_blank" class="text-white decoration_yh">${song}</a> <span class="ml-1 mr-1" style="color:#b5ffce">—</span> <span class="text-white"> left ${spotify_time || "0m 0s"}</span></div>
   }
 }, 1000);
 }
