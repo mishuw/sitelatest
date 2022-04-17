@@ -40,9 +40,7 @@ lanyard.onmessage = function (event) {
   }
 };
 
-function update_presence() { 
-  document.querySelector('.user-data').innerHTML = `${data.d.discord_user.username}<span class="text-lg text-gray-500">#${data.d.discord_user.discriminator}</span>`
-  document.querySelector('.avatar-dc').src = "https://cdn.discordapp.com/avatars/"+data.d.discord_user.id+"/"+data.d.discord_user.avatar+".png?size=4096"
+function update_presence() {
   if(data.d.discord_status == "online"){
     document.querySelector('.status-bg').innerHTML = `<span class="ml-2 text-online px-2 py-1 font-normal rounded-md text-sm"><i class="fa fa-circle text-online mr-2"></i>Online</span>`
   } else if(data.d.discord_status == "idle"){
