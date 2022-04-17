@@ -25,6 +25,10 @@
     --loader-bg: rgb(17, 17, 18);
 }
 
+.spotify {
+    background-color: var(--dc-bg);
+    color: var(--text-color);
+}
 .tech-text {
     background-color: var(--back-text);
 }
