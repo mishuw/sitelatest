@@ -19,7 +19,7 @@
                     </div>
                     <div class="pt-3 ml-4 mr-4 border-t-2 mb-3 border-gray-400">
                         <div class="flex">
-                        <img width="80" class="rounded shadow-xl ac-img" src="https/i.imgur.com/Wf8G0mk.gif.webp" alt="">
+                        <img width="80" class="rounded shadow-xl ac-img" src="" alt="">
                             <div class="ml-3 mt-1">
                                 <h1 class="font-medium text-sm ac-name"></h1>
                                 <h4 class="text-xs font-light text-gray ac-data"></h4>
