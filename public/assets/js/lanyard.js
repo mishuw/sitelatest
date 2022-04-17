@@ -59,7 +59,7 @@ function update_presence() {
     document.querySelector('.ac-name').innerText = data.d.activities[0].name || ``;
     document.querySelector('.ac-data').innerText = data.d.activities[0].details || ``;
     document.querySelector('.ac-data-2').innerText = data.d.activities[0].state || ``;
-    document.querySelector('.ac-img').src = `https://cdn.discordapp.com/app-assets/${data.d.activities[0].application_id}/${data.d.activities[0].assets.large_image}`;
+    document.querySelector('.ac-img').src = `${data.d.activities[0].assets.large_image ? `https://cdn.discordapp.com/app-assets/${data.d.activities[0].application_id}/${data.d.activities[0].assets.large_image}` : 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Heavy_red_"x".png'}`;
   }else if(data.d.listening_to_spotify) {
     var countDownDate = new Date(data.d.spotify.timestamps.end).getTime();
     var now = new Date().getTime();
@@ -73,7 +73,7 @@ function update_presence() {
     document.querySelector('.ac-data').innerText = song;
     document.querySelector('.ac-data-2').innerText = artist;
     document.querySelector('.ac-duration').innerText = spotify_time;
-    document.querySelector('.ac-img').src = `${data.d.spotify.album_art_url}`;
+    document.querySelector('.ac-img').src = `${data.d.spotify.album_art_url || 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Heavy_red_"x".png'}`;
   }
 }, 1000);
 }
