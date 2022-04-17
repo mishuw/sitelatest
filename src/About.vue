@@ -17,6 +17,7 @@
                         <h1 class="ml-4 font-medium user-data text-xl mt-3">mishu<span class="text-lg text-gray-500">#6139</span></h1>
                         <h4 class="text-sm ml-4 font-light text-gray ac-status"></h4>
                     </div>
+                    <div class="pt-3 ml-4 mr-4 mb-3">
                         <div class="flex">
                         <img width="80" class="rounded shadow-xl ac-img" src="" alt="">
                             <div class="ml-3 mt-1">
@@ -24,6 +25,7 @@
                                 <h4 class="text-xs font-light text-gray ac-data"></h4>
                                 <h4 class="text-xs font-light text-gray ac-data-2"></h4>
                                 <h4 class="text-xs font-medium text-gray ac-duration"></h4>
+                        </div>
                         </div>
                     </div>
                 </div>
