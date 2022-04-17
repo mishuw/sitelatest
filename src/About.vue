@@ -5,7 +5,7 @@
             <div class="flex flex-col lg:justify-start justify-center items-center lg:items-start mt-5 lg:mt-0 w-full">
                 <div class="flex items-center">
                     <p class="flex items-center text-4xl font-bold">Hi, I'm
-                        <!-- --><span class="ml-3">mishu</span></p>
+                    <span class="ml-3">mishu</span></p>
                     <span class="status-bg "><span class="ml-2 text-gray px-2 py-1 font-normal rounded-md text-sm"><i class="fa fa-circle text-gray mr-2"></i>Loading</span></span></div>
                 <p class="font-light max-w-xl text-md mt-3">Hello, I'm Mishu. I'm a high school student and I've been coding for about 2-3 years.</p>
             </div>
@@ -15,6 +15,7 @@
                     <div class="-mt-10 relative ml-4"><img class="border-[7px] rounded-full avatar-dc" width="85" src="https://cdn.mishudev.xyz/millie.jpg" alt=""></div>
                     <div class="mb-3">
                         <h1 class="ml-4 font-medium user-data text-xl mt-3">mishu<span class="text-lg text-gray-500">#6139</span></h1>
+                        <h4 class="text-sm ml-4 font-light text-black ac-status"></h4>
                     </div>
                     <div class="pt-3 ml-4 mr-4 border-t-2 mb-3 border-gray-400">
                         <div class="flex">
