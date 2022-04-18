@@ -2,9 +2,7 @@
 <div class="main">
 <div class="preloader">
   <span
-     class="txt-rotate loaderText"
-     data-period="2000"
-     data-rotate='[ "Checking Themes.", "Bringing Data.", "Establishing API Connection.", "You Are Ready!"]'></span>
+     class="loaderText">Establishing API Connection.</span>
   <div class="loaders">
     <span></span>
     <span></span>
