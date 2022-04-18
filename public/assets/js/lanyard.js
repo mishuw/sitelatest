@@ -29,9 +29,7 @@ lanyard.onmessage = function (event) {
   data = JSON.parse(event.data);
   
   $(document).ready(function () {
-    setTimeout(function () {
       $('.preloader').fadeOut(500);
-    }, 10000) 
   })
 
   if (data.t === "INIT_STATE" || data.t === "PRESENCE_UPDATE") {
