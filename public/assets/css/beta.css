@@ -1605,14 +1605,14 @@ html {
 }
 
 .tippy-box {
-    background-color: #040404;
-    color: #fff !important;
+    background-color: var(--dc-bg);
+    color: var(--text-color)!important;
     transition: all .1s;
     box-shadow: 0 0 25px rgba(0, 0, 0, .377)
 }
 
 .tippy-arrow {
-    color: #040404
+    color: var(--dc-bg)
 }
 
 .tippy-box[data-animation=scale][data-placement^=top] {
