@@ -9,6 +9,7 @@
                 <p class="font-light max-w-xl text-md mt-3">Hello, I'm Mishu. I'm a high school student and I've been coding for about 2-3 years.</p>
                 <span class="ml-2 status-bg text-gray px-2 py-1 font-normal rounded-md text-sm"><i class="fa fa-circle text-gray mr-2"></i>Loading.</span>
                 <span class="ml-2 spotify text-gray px-2 py-1 font-normal rounded-md text-sm"><i class="fa fa-circle text-gray mr-2"></i>Loading.</span>
+                <span class="ml-2 text-gray px-2 py-1 font-normal rounded-md text-sm discord-lg" onclick="location.href='https://discord.com/users/906634054311481364'"><i class="fa fa-discord mr-2"></i></span>
             </div>
         </div>
     </div>
