@@ -63,7 +63,7 @@ function update_presence() {
     document.querySelector('.spotify').style.display = ""
     document.querySelector('.spotify').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands fa-spotify text-color mr-2 text-online"></i>Listening to <a href="https://open.spotify.com/track/${data.d.spotify.track_id}" target="_blank" class="text-color decoration_yh">${song}</a> <span class="text-color">— left ${spotify_time || "0m 0s"}</span></span>`
   }else {
-    document.querySelector('.spotify').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands fa-spotify text-color mr-2 text-online"></i>Not listening</span>`;
+    document.querySelector('.spotify').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands fa-spotify text-color mr-2 text-offline"></i>Not listening</span>`;
   }
 }, 1000);
 }
