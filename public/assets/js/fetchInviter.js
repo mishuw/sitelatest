@@ -13,7 +13,7 @@ fetch("https://discord.com/api/invite/212?with_counts=true").then(response => {
         })
     }).catch(error => {
         console.log('Discord API Rate Limited')
-        document.querySelector('.name').innerText = 'API Rate Limited'
+        document.querySelector('.name').innerText = 'Rate Limit'
             inviteBtn.addEventListener('click', () =>{
                 document.querySelector('.invite').innerText = 'Joined'
                 window.open('https://discord.com/invite/212', '_BLANK')
