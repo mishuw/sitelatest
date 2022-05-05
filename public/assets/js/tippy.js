@@ -35,7 +35,7 @@ tippy('.discord-prev', {
     allowHTML: true
 })
 tippy('.activity', {
-    content: '<p class="ml-1 mr-1">My Activity</p>',
+    content: '<p class="ml-1 mr-1">My Profile</p>',
     animation: 'scale',
     placement: 'bottom',
     theme: 'ws',

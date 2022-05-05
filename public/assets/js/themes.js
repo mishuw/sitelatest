@@ -1,5 +1,7 @@
 const btn = document.querySelector('.switch-mode-btn');
-var elements = $('.modal-overlay, .modal');
+const elements = $('.modal-overlay, .modal');
+const closeModal = document.querySelector('.close-modal')
+const showProfile = document.querySelector('.discord_profile_viewer')
 
 btn.addEventListener('click', () => {
     let themeData = localStorage.getItem("theme");
@@ -34,3 +36,11 @@ document.addEventListener("keydown", function (zEvent) {
         $('.modal-overlay, .modal').hasClass('active') ? $('.modal-overlay, .modal').removeClass('active') : $('.modal-overlay, .modal').addClass('active');
     }
 });
+
+closeModal.addEventListener('click', () => {
+    $('.modal-overlay, .modal').removeClass('active');
+})
+
+showProfile.addEventListener('click', () => {
+    $('.modal-overlay, .modal').addClass('active');
+})
