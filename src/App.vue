@@ -16,9 +16,6 @@
     <button onclick="topper()" class="hover:bg-[#d1d1e0]/50 topperButton">
         <i class="fa-regular fa-chevron-up"></i>
     </button>
-    <h1>Simple Responsive Modal</h1>
-<button>Click For Modal</button>
-
 <!-- modal -->
 <div class="modal-overlay">
   <div class="modal">
