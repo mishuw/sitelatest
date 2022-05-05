@@ -1733,9 +1733,6 @@ html {
         margin-top: 5rem;
         width: 350px;
     }
-    .dc-bg {
-        width: 385px;
-    }
 }
 .navbar {
     backdrop-filter: blur(15px);
