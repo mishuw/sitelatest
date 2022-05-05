@@ -1733,6 +1733,16 @@ html {
         margin-top: 5rem;
         width: 350px;
     }
+    .w-\[480px\] {
+        width: 340px;
+    }
+    .text-\[25px\] {
+        font-size: 15px;
+    }
+    .px-10 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 .navbar {
     backdrop-filter: blur(15px);
