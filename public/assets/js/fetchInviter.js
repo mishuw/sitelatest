@@ -1,5 +1,9 @@
 const inviteBtn = document.querySelector('.invite');
-fetch("https://discord.com/api/invite/212?with_counts=true").then(response => {
+fetch("https://discord.com/api/invite/212?with_counts=true", {
+        headers: {
+                  'Content-Type': 'application/json'
+                 },
+}).then(response => {
         response.json().then(data => {
             console.log(data)
             document.querySelector(".icon").src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon;
