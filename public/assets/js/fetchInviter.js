@@ -1,5 +1,5 @@
 const inviteBtn = document.querySelector('.invite');
-fetch("https://discord.com/api/invite/212?with_counts=true", {
+fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
         method: 'GET',
         headers: {
                   'Content-Type': 'application/json'
