@@ -1,5 +1,5 @@
 tippy('.status-bg', {
-    content: '<p class="ml-1 mr-1">Discord status</p>',
+    content: '<p class="ml-1 mr-1">Discord Status</p>',
     animation: 'scale',
     placement: 'bottom',
     theme: 'ws',
@@ -17,7 +17,7 @@ tippy('.discord-lg', {
     allowHTML: true
 });
 tippy('.switch-mode-btn', {
-    content: '<p class="ml-1 mr-1">Theme switch</p>',
+    content: '<p class="ml-1 mr-1">Theme Switch</p>',
     animation: 'scale',
     placement: 'bottom',
     theme: 'ws',
@@ -25,8 +25,17 @@ tippy('.switch-mode-btn', {
     interactive: false,
     allowHTML: true
 })
-tippy('.dc-bg', {
-    content: '<p class="ml-1 mr-1">My Discord Profile</p>',
+tippy('.discord-prev', {
+    content: '<p class="ml-1 mr-1">Discord Server</p>',
+    animation: 'scale',
+    placement: 'bottom',
+    theme: 'ws',
+    inertia: true,
+    interactive: false,
+    allowHTML: true
+})
+tippy('.activity', {
+    content: '<p class="ml-1 mr-1">My Activity</p>',
     animation: 'scale',
     placement: 'bottom',
     theme: 'ws',

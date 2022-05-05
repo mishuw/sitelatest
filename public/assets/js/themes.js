@@ -1,4 +1,5 @@
 const btn = document.querySelector('.switch-mode-btn');
+var elements = $('.modal-overlay, .modal');
 
 btn.addEventListener('click', () => {
     let themeData = localStorage.getItem("theme");
@@ -27,3 +28,9 @@ $(document).ready(function() {
         document.getElementById('switch-mode-btn').innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
 })
+
+document.addEventListener("keydown", function (zEvent) {
+    if (zEvent.shiftKey && zEvent.key === "K") {
+        $('.modal-overlay, .modal').hasClass('active') ? $('.modal-overlay, .modal').removeClass('active') : $('.modal-overlay, .modal').addClass('active');
+    }
+});

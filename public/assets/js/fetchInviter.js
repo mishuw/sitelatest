@@ -1,4 +1,6 @@
 const inviteBtn = document.querySelector('.invite');
+const inviteName = document.querySelector('.name');
+const inviteImg = document.querySelector('.icon');
 fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
         method: 'GET',
         headers: {
@@ -15,6 +17,14 @@ fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
                 document.querySelector('.invite').innerText = 'Joined'
                 window.open('https://discord.com/invite'+data.code, '_BLANK')
             })
+            inviteName.addEventListener('click', () =>{
+                document.querySelector('.invite').innerText = 'Joined'
+                window.open('https://discord.com/invite'+data.code, '_BLANK')
+            })
+            inviteImg.addEventListener('click', () =>{
+                document.querySelector('.invite').innerText = 'Joined'
+                window.open('https://discord.com/invite'+data.code, '_BLANK')
+            })
         })
     }).catch(error => {
         console.log('Discord API Rate Limited')
@@ -22,5 +32,5 @@ fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
             inviteBtn.addEventListener('click', () =>{
                 document.querySelector('.invite').innerText = 'Joined'
                 window.open('https://discord.com/invite/212', '_BLANK')
-            })
+        })
     })
