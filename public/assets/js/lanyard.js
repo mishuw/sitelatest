@@ -55,7 +55,8 @@ function update_presence() {
   setInterval(function () {
     if(data.d.activities[0]) {
     if(data.d.activities[0].type === 0) {
-      var countDownDate = new Date(data.d.activities[0].timestamps.start ? data.d.activities[0].timestamps.start : data.d.activities[0].timestamps.end).getTime();
+      if(data.d.activities[0].timestamps.start) {
+      var countDownDate = new Date(data.d.activities[0].timestamps.start).getTime();
       var now = new Date().getTime();
       var distance = now-countDownDate;
       var hour = Math.floor((distance % (1000 * 60 * 60 * 60)) / (1000 * 60 *60));
@@ -63,6 +64,16 @@ function update_presence() {
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
       var spotify_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}` //hour ? hour+'h ' : ''+ minutes + "m " + seconds+ 's '
       document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> PLAYING ${data.d.activities[0].name} <span class="text-color">— elapsed ${spotify_time}</span></span></span>`
+      }else {
+       var countDownDate = new Date(data.d.activities[0].timestamps.end).getTime();
+      var now = new Date().getTime();
+      var distance = countDownDate-now;
+      var hour = Math.floor((distance % (1000 * 60 * 60 * 60)) / (1000 * 60 *60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      var spotify_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}` //hour ? hour+'h ' : ''+ minutes + "m " + seconds+ 's '
+      document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> PLAYING ${data.d.activities[0].name} <span class="text-color">— left ${spotify_time}</span></span></span>`
+      }
     }else if(data.d.activities[0].type === 2) {
     var countDownDate = new Date(data.d.spotify.timestamps.end).getTime();
     var now = new Date().getTime();
