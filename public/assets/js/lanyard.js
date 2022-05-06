@@ -55,7 +55,7 @@ function update_presence() {
   setInterval(function () {
     if(data.d.activities[0]) {
     if(data.d.activities[0].type === 0) {
-      var countDownDate = new Date(data.d.activities[0].timestamps.start).getTime();
+      var countDownDate = new Date(data.d.activities[0].timestamps.start ? data.d.activities[0].timestamps.start : data.d.activities[0].timestamps.end).getTime();
       var now = new Date().getTime();
       var distance = now-countDownDate;
       var hour = Math.floor((distance % (1000 * 60 * 60 * 60)) / (1000 * 60 *60));
