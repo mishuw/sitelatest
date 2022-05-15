@@ -2,12 +2,12 @@
 <div class="main">
 <div class="preloader">
   <span
-     class="loaderText">Establishing API Connection.</span>
-  <div class="loaders">
+     class="loaderText">better soon</span>
+  <!--<div class="loaders">
     <span></span>
     <span></span>
     <span></span>
-</div>
+</div>-->
 </div>
 <div class="min-h-screen max-w-screen-xl p-5 w-full px-[40px] mx-auto transition-all duration-300">
     <Navbar />
