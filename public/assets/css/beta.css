@@ -1961,7 +1961,7 @@ html {
       right: 20px !important;
     }
   }
-.cdnL {
+.redirectbtn {
   border: 1px solid #f40612;
   background: #f40612;
   color: white;
@@ -1969,7 +1969,7 @@ html {
   padding: 1% 4%;
   transition: 50ms;
 }
-.cdnL:hover {
+.redirectbtn:hover {
   background: #41030c85;
   border: 1px solid #f40612;
   text-decoration: none;
