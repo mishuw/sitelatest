@@ -1969,4 +1969,11 @@ html {
   padding: 1% 4%;
   transition: 50ms;
 }
+.cdnL:hover {
+  background-color: #41030c85;
+  border: 1px solid #f40612;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
   
