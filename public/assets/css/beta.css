@@ -1961,4 +1961,12 @@ html {
       right: 20px !important;
     }
   }
+.cdnL {
+  border: 1px solid #f40612;
+  background-color: #f40612;
+  color: white;
+  font-size: 20px;
+  padding: 1% 4%;
+  transition: 50ms;
+}
   
