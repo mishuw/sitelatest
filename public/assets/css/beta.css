@@ -1963,14 +1963,14 @@ html {
   }
 .cdnL {
   border: 1px solid #f40612;
-  background-color: #f40612;
+  background: #f40612;
   color: white;
   font-size: 20px;
   padding: 1% 4%;
   transition: 50ms;
 }
 .cdnL:hover {
-  background-color: #41030c85;
+  background: #41030c85;
   border: 1px solid #f40612;
   text-decoration: none;
   color: white;
