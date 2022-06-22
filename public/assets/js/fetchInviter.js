@@ -1,6 +1,7 @@
 const inviteBtn = document.querySelector('.invite');
 const inviteName = document.querySelector('.name');
 const inviteImg = document.querySelector('.icon');
+
 fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
         method: 'GET',
         headers: {
@@ -9,21 +10,30 @@ fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
 }).then(response => {
         response.json().then(data => {
             console.log(data)
-            document.querySelector(".icon").src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon;
+            document.querySelector(".icon").src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon+'.png?size=4096';
             document.querySelector('.name').innerText = data.guild.name.length > 14 ? data.guild.name.substring(0, 14) + "..." : data.guild.name;
             document.querySelector(".members").innerText = data.approximate_presence_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+' Online'
             document.querySelector(".topmembers").innerText = data.approximate_member_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+' Members'
             inviteBtn.addEventListener('click', () =>{
                 document.querySelector('.invite').innerText = 'Joined'
-                window.open('https://discord.com/invite'+data.code, '_BLANK')
+                window.open('https://discord.com/invite/'+data.code, '_BLANK')
             })
             inviteName.addEventListener('click', () =>{
                 document.querySelector('.invite').innerText = 'Joined'
-                window.open('https://discord.com/invite'+data.code, '_BLANK')
+                window.open('https://discord.com/invite/'+data.code, '_BLANK')
             })
             inviteImg.addEventListener('click', () =>{
                 document.querySelector('.invite').innerText = 'Joined'
-                window.open('https://discord.com/invite'+data.code, '_BLANK')
+                window.open('https://discord.com/invite/'+data.code, '_BLANK')
+            })
+        // Sunucu divine hover yapıldığında iconu gife çevir;
+            $('.discord-div').mouseenter(function(){
+                document.querySelector(".icon").src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon+'.gif?size=4096';
+                console.log("%c[PERFORMANCE] Switch gif.", "color:#b5b5e7;font-family:sans-serif;font-size: 15px;font-weight: bold;");
+            })
+            $('.discord-div').mouseleave(function(){
+                document.querySelector(".icon").src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon+'.png?size=4096';
+                console.log("%c[PERFORMANCE] Switch png.", "color:#b5b5e7;font-family:sans-serif;font-size: 15px;font-weight: bold;");
             })
         })
     }).catch(error => {
@@ -33,4 +43,16 @@ fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
                 document.querySelector('.invite').innerText = 'Joined'
                 window.open('https://discord.com/invite/212', '_BLANK')
         })
+    })
+
+    user = {}
+
+    fetch("https://api.mishudev.xyz/v1/user/906634054311481364", {
+        headers:{
+            'Accept':'application/json',
+            'Content-Type':'application/json',
+        },
+    }).then(response => response.json()).then(data => {
+        user = data
+        document.querySelector('.banner').style.background = `url('https://cdn.discordapp.com/banners/${data.id}/${data.banner}.png?size=4096') center center no-repeat`;
     })

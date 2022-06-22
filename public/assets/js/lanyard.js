@@ -40,7 +40,7 @@ lanyard.onmessage = function (event) {
 
 function update_presence() {
   document.querySelector('.discord_username').innerHTML = `${data.d.discord_user.username}<span class="text-color text-gray-500">#${data.d.discord_user.discriminator}</span>`;
-  document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+'.png?size=1024';
+  document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+'.png?size=4096';
   if(data.d.discord_status == "online"){
     document.querySelector('.status-bg').innerHTML = `<span class="ml-2 text-online px-2 py-1 font-normal rounded-md text-sm"><i class="fa fa-circle text-online mr-2"></i>Online</span>`
   } else if(data.d.discord_status == "idle"){
@@ -63,7 +63,10 @@ function update_presence() {
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
       var spotify_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}` //hour ? hour+'h ' : ''+ minutes + "m " + seconds+ 's '
-      document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> PLAYING ${data.d.activities[0].name} <span class="text-color">— elapsed ${spotify_time}</span></span></span>`
+      document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> PLAYING ${data.d.activities[0].name} <span class="text-color">— elapsed ${spotify_time}</span></span></span>`;
+      document.querySelector('.acitivityUp').innerText = `${data.d.activities[0].details}`;
+      document.querySelector('.acitivityDown').innerText = `${data.d.activities[0].state}`;
+      document.querySelector('.activityElapsed').innerText = `${spotify_time}`
       }else {
        var countDownDate = new Date(data.d.activities[0].timestamps.end).getTime();
       var now = new Date().getTime();

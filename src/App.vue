@@ -24,11 +24,23 @@
       <i class="fa-solid fa-x"></i>
     </button>
 
-      <div class="dc-bg pb-1 rounded-b-lg rounded-t-lg" style="heigth: 200px;width:350px;">
+      <div class="dc-bg pb-1 rounded-b-lg rounded-t-lg">
     <div>
-        <div class="-mt-12 relative ml-4"><img class="border-[6px] border-[#EEE8ED] discord_user_img bg-[#EEE8ED] rounded-full" width="95" src="" alt=""></div>
         <div class="mb-3">
-            <h1 class="ml-4 font-bold text-color text-xl mt-3 discord_username"><span class="text-color text-gray-500">#</span></h1>
+            <div class="banner" style="height:150px;width:350px;background:url('https://cdn.mishudev.xyz/millie.jpg') center center no-repeat;background-size: cover;background-attachment:fixed;background-position:center;">
+                <div class="mt-12 relative ml-4" style="padding-top:75px;">
+                <img class="border-[#EEE8ED] discord_user_img bg-[#EEE8ED]" width="95" src="" alt="" style="border-radius:999%;">
+                </div>
+            </div>
+        
+            <h1 class="ml-4 font-bold text-color text-xl mt-3 discord_username" style="padding-top:15px;"><span class="text-color text-gray-500">#</span></h1>
+        </div>
+    </div>
+    <div class="activityDetails">
+        <div class="mb-3">
+            <span class="ml-4 text-color mt-3 acitivityUp">Loading</span><br>
+            <span class="ml-4 text-color mt-3 acitivityDown">Loading</span><br>
+            <span class="ml-4 text-color mt-3 activityElapsed">Loading</span>
         </div>
     </div>
 </div>
