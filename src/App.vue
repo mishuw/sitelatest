@@ -49,7 +49,7 @@
 </div>
   <div class="footer">
         <div class="footer-in padding">
-            <p class="footer-text">{{ new Date().getFullYear()}} mishu</p>
+            <p class="footer-text"><button class="navbar-btns mr-1 redirectbtn" onclick="location.href='https://stranger-things.mishudev.xyz'">Stranger Things</button></p>
         </div>
     </div>
 </div>
