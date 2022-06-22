@@ -6,9 +6,9 @@
                 <div class="flex items-center">
                     <p class="flex items-center text-4xl font-bold">Hi, I'm mishu</p></div>
                 <p class="font-light max-w-xl text-md mt-3">Hello, I'm Mishu. I'm a high school student and I've been coding for about 2-3 years.</p>
-                <span class="ml-2 status-bg dc-bg px-2 py-1 font-normal rounded-md text-sm"><i class="fa fa-circle text-offline mr-2"></i>Loading</span>
-                <span class="ml-2 activity dc-bg px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands fa-spotify text-offline mr-2"></i>Loading</span>
-                <span class="ml-2 discord-lg dc-bg px-2 py-1 font-normal rounded-md text-sm discord_profile_viewer" style="cursor:pointer;"><span class="ml-2 text-offline px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands fa-discord text-color mr-2"></i></span></span>
+                <span class="ml-2 status-bg dc-bg px-2 py-1 font-normal rounded-md text-sm" style="margin:5px;"><i class="fa fa-circle text-offline mr-2"></i>Loading</span>
+                <span class="ml-2 activity dc-bg px-2 py-1 font-normal rounded-md text-sm" style="margin:5px;"><i class="fa-brands fa-spotify text-offline mr-2"></i>Loading</span>
+                <span class="ml-2 discord-lg dc-bg px-2 py-1 font-normal rounded-md text-sm discord_profile_viewer" style="cursor:pointer;margin:5px;"><span class="ml-2 text-offline px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands fa-discord text-color mr-2"></i></span></span>
             </div>
             <div class="m-2">
     <div class="dc-bg discord-div discord-prev w-[480px] h-28 flex justify-between items-center px-4 rounded-b-lg">
