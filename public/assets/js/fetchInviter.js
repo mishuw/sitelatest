@@ -17,14 +17,20 @@ fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
             inviteBtn.addEventListener('click', () =>{
                 document.querySelector('.invite').innerText = 'Joined'
                 window.open('https://discord.com/invite/'+data.code, '_BLANK')
+                document.querySelector('.invite').style.background = 'transparent';
+                document.querySelector('.invite').style.border = '1px solid rgb(45 125 70/1)';
             })
             inviteName.addEventListener('click', () =>{
                 document.querySelector('.invite').innerText = 'Joined'
                 window.open('https://discord.com/invite/'+data.code, '_BLANK')
+                document.querySelector('.invite').style.background = 'transparent';
+                document.querySelector('.invite').style.border = '1px solid rgb(45 125 70/1)';
             })
             inviteImg.addEventListener('click', () =>{
                 document.querySelector('.invite').innerText = 'Joined'
                 window.open('https://discord.com/invite/'+data.code, '_BLANK')
+                document.querySelector('.invite').style.background = 'transparent';
+                document.querySelector('.invite').style.border = '1px solid rgb(45 125 70/1)';
             })
         // Sunucu divine hover yapıldığında iconu gife çevir;
             $('.discord-div').mouseenter(function(){

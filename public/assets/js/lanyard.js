@@ -39,6 +39,38 @@ lanyard.onmessage = function (event) {
 };
 
 function update_presence() {
+  var codeAc = data.d.activities.find(mills => mills.application_id === "782685898163617802");
+  if(codeAc){
+    if(codeAc.details){
+      document.querySelector('.acitivityUp').innerHTML = `&nbsp;${codeAc.details}`;
+    }else {
+      document.querySelector('.acitivityUp').style.display = 'none';
+    }
+    if(codeAc.state){
+      document.querySelector('.acitivityDown').innerHTML = `&nbsp;${codeAc.state}`;
+    }else {
+      document.querySelector('.acitivityDown').style.display = 'none';
+    }
+  }else if(data.d.activities.find(el => el.type === 0)) {
+    const d = data.d.activities.find(el => el.type === 0)
+    if(d.details){
+      document.querySelector('.acitivityUp').innerHTML = `&nbsp;${d.details}`;
+    }else {
+      document.querySelector('.acitivityUp').style.display = 'none';
+    }
+    if(d.state){
+      document.querySelector('.acitivityDown').innerHTML = `&nbsp;${d.state}`;
+    }else {
+      document.querySelector('.acitivityDown').style.display = 'none';
+    }
+  }else{
+    document.querySelector('.activity').innerHTML = ``;
+    document.querySelector('.activity').style.display = "none";
+    document.querySelector('.acitivityUp').innerHTML = ``;
+    document.querySelector('.acitivityUp').style.display = 'none';
+    document.querySelector('.acitivityDown').innerHTML = ``;
+    document.querySelector('.acitivityDown').style.display = 'none';
+  }
   document.querySelector('.discord_username').innerHTML = `${data.d.discord_user.username}<span class="text-color text-gray-500">#${data.d.discord_user.discriminator}</span>`;
   document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+'.png?size=4096';
   if(data.d.discord_status == "online"){
@@ -52,55 +84,52 @@ function update_presence() {
   } else {
     document.querySelector('.status-bg').innerHTML = `<span class="ml-2 text-offline px-2 py-1 font-normal rounded-md text-sm"><i class="fa fa-circle text-offline mr-2"></i>Offline</span>`
   }
-  setInterval(function () {
-    if(data.d.activities[0]) {
-    if(data.d.activities[0].type === 0) {
-      if(data.d.activities[0].timestamps.start) {
-      var countDownDate = new Date(data.d.activities[0].timestamps.start).getTime();
-      var now = new Date().getTime();
-      var distance = now-countDownDate;
-      var hour = Math.floor((distance % (1000 * 60 * 60 * 60)) / (1000 * 60 *60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      var spotify_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}` //hour ? hour+'h ' : ''+ minutes + "m " + seconds+ 's '
-      document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> PLAYING ${data.d.activities[0].name} <span class="text-color">— elapsed ${spotify_time}</span></span></span>`;
-      document.querySelector('.acitivityUp').innerText = `${data.d.activities[0].details}`;
-      document.querySelector('.acitivityDown').innerText = `${data.d.activities[0].state}`;
-      document.querySelector('.activityElapsed').innerText = `${spotify_time}`
-      }else {
-       var countDownDate = new Date(data.d.activities[0].timestamps.end).getTime();
-      var now = new Date().getTime();
-      var distance = countDownDate-now;
-      var hour = Math.floor((distance % (1000 * 60 * 60 * 60)) / (1000 * 60 *60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      var spotify_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}` //hour ? hour+'h ' : ''+ minutes + "m " + seconds+ 's '
-      document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> PLAYING ${data.d.activities[0].name} <span class="text-color">— left ${spotify_time}</span></span></span>`
-      }
-    }else if(data.d.activities[0].type === 2) {
-    var countDownDate = new Date(data.d.spotify.timestamps.end).getTime();
+  
+  var cstatus = data.d.activities.find(el => el.id === "custom"); 
+  if(cstatus) {
+    document.querySelector('.customStatus').innerHTML = `<span class="text-color text-sm customText">${cstatus.state}</span><hr>`;
+  }else {
+    document.querySelector('.customStatus').innerHTML = ``;
+    document.querySelector('.customStatus').style.display = "none";
+  }
+
+  setInterval(function(){
+    if(codeAc){
+    var countDownDate = new Date(codeAc.timestamps.start).getTime();
     var now = new Date().getTime();
-    var distance = countDownDate - now;
+    var distance = now-countDownDate;
     var hour = Math.floor((distance % (1000 * 60 * 60 * 60)) / (1000 * 60 *60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    var spotify_time = minutes + "m " + seconds+ 's '
-    var artist = data.d.spotify.artist.split(';')[0].split(',')[0];
-    var song = data.d.spotify.song.split('(')[0];
-    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands fa-spotify text-color mr-2"></i>Listening to <a href="https://open.spotify.com/track/${data.d.spotify.track_id}" target="_blank" class="text-color decoration_yh">${song}</a> <span class="text-color">— left ${spotify_time}</span></span>`
-  }else if(data.d.activities[0].type === 3) {
-    var countDownDate = new Date(data.d.spotify.timestamps.end).getTime();
+    var elapsed_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}`
+    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> PLAYING ${codeAc.name} <span class="text-color">— elapsed ${elapsed_time}</span></span></span>`;
+    document.querySelector('.activityElapsed').innerHTML = `&nbsp;${elapsed_time}`;
+  }else if(data.d.activities.find(el => el.type === 0)) {
+    const d = data.d.activities.find(el => el.type === 0)
+    var countDownDate = new Date(d.timestamps.start).getTime();
     var now = new Date().getTime();
-    var distance = countDownDate - now;
+    var distance = now-countDownDate;
+    var hour = Math.floor((distance % (1000 * 60 * 60 * 60)) / (1000 * 60 *60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    var spotify_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}` //hour ? hour+'h ' : ''+ minutes + "m " + seconds+ 's '
-    var artist = data.d.spotify.artist.split(';')[0].split(',')[0];
-    var song = data.d.spotify.song.split('(')[0];
-    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-tv"></i>Watching ${data.d.activities[0].name} <span class="text-color">— left ${spotify_time}</span></span>`
+    var elapsed_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}`
+
+    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> PLAYING ${d.name} <span class="text-color">— elapsed ${elapsed_time}</span></span></span>`;
   }
-}else {
-  document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa fa-circle text-offline mr-2"></i>No Activity</span>`
-}
-}, 1000);
+    if(data.d.listening_to_spotify == true) {
+    var crD = new Date(data.d.spotify.timestamps.end).getTime();
+    var now = new Date().getTime();
+    var distance = crD - now;
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var spotify_time = minutes + "m " + seconds + "s ";
+    var artist = data.d.spotify.artist.split(";")[0].split(",")[0]
+    var song = data.d.spotify.song.split("(")[0];
+
+    document.querySelector('.listening-activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands text-color fa-spotify"></i> Listening to <a href="https://ope.spotify.com/track/${data.d.spotify.track_id}" target="_blank">${song}</a> by ${artist} <span class="text-color">— left ${spotify_time}</span></span></span>`
+    } else {
+      document.querySelector('.listening-activity').innerHTML = ``;
+      document.querySelector('.listening-activity').style.display = "none";
+    }
+  }, 1000)
 }

@@ -296,7 +296,6 @@ object,
 svg,
 video {
     display: block;
-    vertical-align: middle
 }
 
 img,
@@ -1774,7 +1773,7 @@ html {
     margin-top: 30px;
     height: 90px;
 }
-.topperButton {
+.navigatorButtons {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -1793,12 +1792,12 @@ html {
     color: var(--text-color);
 }
 
-.topperButton:hover {
+.navigatorButtons:hover {
     border: none;
     outline: none;
 }
 
-.topperButton:focus {
+.navigatorButtons:focus {
     border: none;
     outline: none;
 }
@@ -1991,4 +1990,21 @@ html {
     user-select: none;
     text-transform: uppercase;
     height: 28px;
+}
+a {
+    text-decoration: none;
+    color: rgb(182, 182, 231);
+    transition: 0.2s;
+}
+a:hover{
+    color: rgb(182, 182, 231, 0.5);
+}
+.discord_user_img {
+    border-width: 4px;
+    border-color: var(--dc-bg);
+}
+.banner{
+    background-size:cover;
+    background-attachment:fixed;
+    background-position:center;
 }

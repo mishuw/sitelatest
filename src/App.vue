@@ -13,7 +13,7 @@
     <Navbar />
     <About />
     <Technologies />
-    <button onclick="topper()" class="hover:bg-[#d1d1e0]/50 topperButton">
+    <button onclick="topper()" class="hover:bg-[#d1d1e0]/50 topperButton navigatorButtons">
         <i class="fa-regular fa-chevron-up"></i>
     </button>
 <!-- modal -->
@@ -27,20 +27,20 @@
       <div class="dc-bg pb-1 rounded-b-lg rounded-t-lg">
     <div>
         <div class="mb-3">
-            <div class="banner" style="height:150px;width:350px;background:url('https://cdn.mishudev.xyz/millie.jpg') center center no-repeat;background-size: cover;background-attachment:fixed;background-position:center;">
+            <div class="banner" style="height:150px;width:350px;background:url('https://cdn.mishudev.xyz/millie.jpg') center center no-repeat;background-size:contain;background-attachment:fixed;background-position:center;">
                 <div class="mt-12 relative ml-4" style="padding-top:75px;">
-                <img class="border-[#EEE8ED] discord_user_img bg-[#EEE8ED]" width="95" src="" alt="" style="border-radius:999%;">
+                <img class="discord_user_img bg-[#EEE8ED]" draggable="false" width="95" src="" alt="mishu avatar" style="border-radius:999%;">
                 </div>
             </div>
-        
             <h1 class="ml-4 font-bold text-color text-xl mt-3 discord_username" style="padding-top:15px;"><span class="text-color text-gray-500">#</span></h1>
+            <div class="customStatus ml-4"><span class="text-color text-sm customText"></span></div>
         </div>
     </div>
     <div class="activityDetails">
-        <div class="mb-3">
-            <span class="ml-4 text-color mt-3 acitivityUp">Loading</span><br>
-            <span class="ml-4 text-color mt-3 acitivityDown">Loading</span><br>
-            <span class="ml-4 text-color mt-3 activityElapsed">Loading</span>
+        <div class="mb-3 ml-4">
+            <span class="text-color mt-3 acitivityUp">Loading</span><br>
+            <span class="text-color mt-3 acitivityDown">Loading</span><br>
+            <span class="text-color mt-3 activityElapsed">Loading</span>
         </div>
     </div>
 </div>
