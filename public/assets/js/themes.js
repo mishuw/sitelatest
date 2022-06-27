@@ -34,7 +34,6 @@ $(document).ready(function() {
 document.addEventListener("keydown", function (pressedKey) {
     if (pressedKey.shiftKey && pressedKey.key === "K") {
         $('.modal-overlay, .modal').hasClass('active') ? $('.modal-overlay, .modal').removeClass('active') : $('.modal-overlay, .modal').addClass('active');
-        $('.modal-overlay, .modal').hasClass('active') ? document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+'.gif?size=4096' : document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+'.png?size=4096';
     }
 });
 
