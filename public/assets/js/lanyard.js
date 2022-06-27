@@ -43,8 +43,6 @@ function update_presence() {
   if(codeAc){
     if(codeAc.details){
       document.querySelector('.acitivityUp').innerHTML = `&nbsp;${codeAc.details}`;
-    }else if(codeAc.name){
-      document.querySelector('.acitivityUp').innerHTML = `&nbsp;${codeAc.name}`;
     }else {
       document.querySelector('.acitivityUp').style.display = 'none';
     }
@@ -57,6 +55,8 @@ function update_presence() {
     const d = data.d.activities.find(el => el.type === 0)
     if(d.details){
       document.querySelector('.acitivityUp').innerHTML = `&nbsp;${d.details}`;
+    }else if(d.name){
+      document.querySelector('.acitivityUp').innerHTML = `&nbsp;${d.name}`;
     }else {
       document.querySelector('.acitivityUp').style.display = 'none';
     }
@@ -64,9 +64,6 @@ function update_presence() {
       document.querySelector('.acitivityDown').innerHTML = `&nbsp;${d.state}`;
     }else {
       document.querySelector('.acitivityDown').style.display = 'none';
-    }
-    if(!d.timestamps.start){
-    document.querySelector('.activityElapsed').style.display = 'none';
     }
   }else{
     document.querySelector('.activity').innerHTML = ``;
