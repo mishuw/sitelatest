@@ -43,6 +43,8 @@ function update_presence() {
   if(codeAc){
     if(codeAc.details){
       document.querySelector('.acitivityUp').innerHTML = `&nbsp;${codeAc.details}`;
+    }else if(codeAc.name){
+      document.querySelector('.acitivityUp').innerHTML = `&nbsp;${codeAc.name}`;
     }else {
       document.querySelector('.acitivityUp').style.display = 'none';
     }
