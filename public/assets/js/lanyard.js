@@ -65,6 +65,9 @@ function update_presence() {
     }else {
       document.querySelector('.acitivityDown').style.display = 'none';
     }
+    if(!d.timestamps.start){
+    document.querySelector('.activityElapsed').style.display = 'none';
+    }
   }else{
     document.querySelector('.activity').innerHTML = ``;
     document.querySelector('.activity').style.display = "none";
