@@ -10,7 +10,7 @@ fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
 }).then(response => {
         response.json().then(data => {
             console.log(data)
-            document.querySelector(".icon").src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon+'.png?size=4096';
+            document.querySelector(".icon").src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon+'?size=4096';
             document.querySelector('.name').innerText = data.guild.name.length > 14 ? data.guild.name.substring(0, 14) + "..." : data.guild.name;
             document.querySelector(".members").innerText = data.approximate_presence_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+' Online'
             document.querySelector(".topmembers").innerText = data.approximate_member_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+' Members'
@@ -32,15 +32,6 @@ fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
                 document.querySelector('.invite').style.background = 'transparent';
                 document.querySelector('.invite').style.border = '1px solid rgb(45 125 70/1)';
             })
-        // Sunucu divine hover yapıldığında iconu gife çevir;
-            $('.discord-div').mouseenter(function(){
-                document.querySelector(".icon").src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon+'.gif?size=4096';
-                console.log("%c[PERFORMANCE] Switch gif.", "color:#b5b5e7;font-family:sans-serif;font-size: 15px;font-weight: bold;");
-            })
-            $('.discord-div').mouseleave(function(){
-                document.querySelector(".icon").src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon+'.png?size=4096';
-                console.log("%c[PERFORMANCE] Switch png.", "color:#b5b5e7;font-family:sans-serif;font-size: 15px;font-weight: bold;");
-            })
         })
     }).catch(error => {
         console.log('Discord API Rate Limited')
@@ -60,5 +51,5 @@ fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
         },
     }).then(response => response.json()).then(data => {
         user = data
-        document.querySelector('.banner').style.background = `url('https://cdn.discordapp.com/banners/${data.id}/${data.banner}.png?size=4096') center center no-repeat`;
+        document.querySelector('.banner').style.background = `url('https://cdn.discordapp.com/banners/${data.id}/${data.banner}?size=4096') center center no-repeat`;
     })
