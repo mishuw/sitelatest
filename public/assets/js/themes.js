@@ -40,16 +40,8 @@ document.addEventListener("keydown", function (pressedKey) {
 
 closeModal.addEventListener('click', () => {
     $('.modal-overlay, .modal').removeClass('active');
-    if($('.modal-overlay, .modal').hasClass('active') !== true) {
-        document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+'.png?size=4096';
-        console.log("%c[PERFORMANCE] Switch png", "color:#b5b5e7;font-family:sans-serif;font-size: 15px;font-weight: bold;");
-    }
 })
 
 showProfile.addEventListener('click', () => {
     $('.modal-overlay, .modal').addClass('active');
-    if($('.modal-overlay, .modal').hasClass('active') === true) {
-        document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+'.gif?size=4096';
-        console.log("%c[PERFORMANCE] Switch gif.", "color:#b5b5e7;font-family:sans-serif;font-size: 15px;font-weight: bold;");
-    }
 })
