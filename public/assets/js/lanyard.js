@@ -89,7 +89,7 @@ function update_presence() {
   
   var cstatus = data.d.activities.find(el => el.id === "custom"); 
   if(cstatus) {
-    document.querySelector('.customStatus').innerHTML = `<span class="text-color text-sm customText">${cstatus.state}</span><hr>`;
+    document.querySelector('.customStatus').innerHTML = `<span class="text-color text-sm customText">${cstatus.state}</span><hr style="margin-right:1rem;">`;
   }else {
     document.querySelector('.customStatus').innerHTML = ``;
     document.querySelector('.customStatus').style.display = "none";
