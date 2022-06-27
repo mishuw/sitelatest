@@ -106,7 +106,7 @@ function update_presence() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     var elapsed_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}`
-    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> PLAYING ${codeAc.name} <span class="text-color">— elapsed ${elapsed_time}</span></span></span>`;
+    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> Playing ${codeAc.name} <span class="text-color">— elapsed ${elapsed_time}</span></span></span>`;
     document.querySelector('.activityElapsed').innerHTML = `&nbsp;${elapsed_time}`;
   }else if(data.d.activities.find(el => el.type === 0)) {
     const d = data.d.activities.find(el => el.type === 0)
@@ -118,7 +118,7 @@ function update_presence() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     var elapsed_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}`
 
-    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> PLAYING ${d.name} <span class="text-color">— elapsed ${elapsed_time}</span></span></span>`;
+    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> Playing ${d.name} <span class="text-color">— elapsed ${elapsed_time}</span></span></span>`;
     document.querySelector('.activityElapsed').innerHTML = `&nbsp;${elapsed_time}`;
   }
     if(data.d.listening_to_spotify == true) {
