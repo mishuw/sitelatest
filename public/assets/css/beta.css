@@ -1774,7 +1774,7 @@ html {
     height: 90px;
 }
 
-.navbar p{
+.navbar a{
     color: var(--text-color);
 }
 
