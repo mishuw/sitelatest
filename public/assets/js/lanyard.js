@@ -70,6 +70,8 @@ function update_presence() {
     document.querySelector('.acitivityUp').style.display = 'none';
     document.querySelector('.acitivityDown').innerHTML = ``;
     document.querySelector('.acitivityDown').style.display = 'none';
+    document.querySelector('.activityElapsed').innerHTML = ``;
+    document.querySelector('.activityElapsed').style.display = 'none';
   }
   document.querySelector('.discord_username').innerHTML = `${data.d.discord_user.username}<span class="text-color text-gray-500">#${data.d.discord_user.discriminator}</span>`;
   document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+'.png?size=4096';
