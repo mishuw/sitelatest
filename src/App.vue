@@ -1,8 +1,7 @@
 <template>
 <div class="main">
 <div class="preloader">
-  <span
-     class="loaderText">better soon</span>
+  <span class="loaderText">better soon</span>
   <!--<div class="loaders">
     <span></span>
     <span></span>
@@ -19,9 +18,13 @@
 <!-- modal -->
 <div class="modal-overlay">
   <div class="modal">
-    
     <button class="close-modal text-color">
-      <i class="fa-solid fa-x"></i>
+        <span class="close-wrapper">
+			<span class="close">
+				<i class="fa-solid fa-x"></i>
+			</span>
+			<span class="text title eskeys">ESC</span>
+		</span>
     </button>
 
       <div class="dc-bg pb-1 rounded-b-lg rounded-t-lg">

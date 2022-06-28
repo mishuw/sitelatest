@@ -33,14 +33,22 @@ $(document).ready(function() {
 
 document.addEventListener("keydown", function (pressedKey) {
     if (pressedKey.shiftKey && pressedKey.key === "K") {
-        $('.modal-overlay, .modal').hasClass('active') ? $('.modal-overlay, .modal').removeClass('active') : $('.modal-overlay, .modal').addClass('active');
+        $('.modal-overlay, .modal').hasClass('active') ? $('.modal-overlay, .modal').removeClass('active') && $('body').css('overflow', 'auto') : $('.modal-overlay, .modal').addClass('active') && $('body').css('overflow', 'hidden');
+    }
+    if(pressedKey.key === 'Escape'){
+        if($('.modal-overlay, .modal').hasClass('active')){
+            $('.modal-overlay, .modal').removeClass('active')
+            $('body').css('overflow', 'auto')
+        }
     }
 });
 
 closeModal.addEventListener('click', () => {
     $('.modal-overlay, .modal').removeClass('active');
+    $('body').css('overflow', 'auto')
 })
 
 showProfile.addEventListener('click', () => {
     $('.modal-overlay, .modal').addClass('active');
+    $('body').css('overflow', 'hidden')
 })
