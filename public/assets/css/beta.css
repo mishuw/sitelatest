@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@font-face {font-family: "Cera Pro";
+    src: url("//db.onlinewebfonts.com/t/98b78079f5ee4295c40260785b4e4fbf.eot");
+    src: url("//db.onlinewebfonts.com/t/98b78079f5ee4295c40260785b4e4fbf.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/98b78079f5ee4295c40260785b4e4fbf.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/98b78079f5ee4295c40260785b4e4fbf.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/98b78079f5ee4295c40260785b4e4fbf.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/98b78079f5ee4295c40260785b4e4fbf.svg#Cera Pro") format("svg"); 
+}
 
 * {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Cera Pro', sans-serif;
 }
 
 :root {
