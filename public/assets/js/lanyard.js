@@ -66,13 +66,9 @@ function update_presence() {
       document.querySelector('.acitivityDown').style.display = 'none';
     }
   }else{
-    document.querySelector('.activity').innerHTML = ``;
     document.querySelector('.activity').style.display = "none";
-    document.querySelector('.acitivityUp').innerHTML = ``;
     document.querySelector('.acitivityUp').style.display = 'none';
-    document.querySelector('.acitivityDown').innerHTML = ``;
     document.querySelector('.acitivityDown').style.display = 'none';
-    document.querySelector('.activityElapsed').innerHTML = ``;
     document.querySelector('.activityElapsed').style.display = 'none';
   }
   document.querySelector('.discord_username').innerHTML = `${data.d.discord_user.username}<span class="text-color text-gray-500">#${data.d.discord_user.discriminator}</span>`;
@@ -106,6 +102,7 @@ function update_presence() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     var elapsed_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}`
+    if(window.getComputedStyle(document.querySelector('.activity')).display == "none"){ document.querySelector('.activity').style.display = 'flex'; }
     document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> Playing ${codeAc.name} <span class="text-color">— elapsed ${elapsed_time}</span></span></span>`;
     document.querySelector('.activityElapsed').innerHTML = `&nbsp;${elapsed_time}`;
   }else if(data.d.activities.find(el => el.type === 0)) {
@@ -117,7 +114,7 @@ function update_presence() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     var elapsed_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}`
-
+    if(window.getComputedStyle(document.querySelector('.activity')).display == "none"){ document.querySelector('.activity').style.display = 'flex'; }
     document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> Playing ${d.name} <span class="text-color">— elapsed ${elapsed_time}</span></span></span>`;
     document.querySelector('.activityElapsed').innerHTML = `&nbsp;${elapsed_time}`;
   }
@@ -130,6 +127,7 @@ function update_presence() {
     var spotify_time = minutes + "m " + seconds + "s ";
     var artist = data.d.spotify.artist.split(";")[0].split(",")[0]
     var song = data.d.spotify.song.split("(")[0];
+    if(window.getComputedStyle(document.querySelector('.listening-activity')).display == "none"){ document.querySelector('.listening-activity').style.display = 'flex'; }
 
     document.querySelector('.listening-activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands text-color fa-spotify"></i> Listening to <a href="https://ope.spotify.com/track/${data.d.spotify.track_id}" target="_blank">${song}</a> by ${artist} <span class="text-color">— left ${spotify_time}</span></span></span>`
     } else {

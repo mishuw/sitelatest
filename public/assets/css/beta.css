@@ -1221,13 +1221,20 @@ html {
 }
 
 ::-webkit-scrollbar {
-    display: none
+    width: 10px;
+    background-color: transparent;
 }
 
-.overflow-small::-webkit-scrollbar {
-    width: 8px;
-    height: 18px;
-    background: var(--scrollbar-background)
+::-webkit-scrollbar-thumb {
+    background-color: var(--dc-bg);
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
 .pulse-avatar-dnd {
