@@ -1,11 +1,10 @@
 @font-face {
     font-family: "Cera Pro";
-    src: url("//db.onlinewebfonts.com/t/98b78079f5ee4295c40260785b4e4fbf.eot");
-    src: url("//db.onlinewebfonts.com/t/98b78079f5ee4295c40260785b4e4fbf.eot?#iefix") format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/98b78079f5ee4295c40260785b4e4fbf.woff2") format("woff2"),
-    url("//db.onlinewebfonts.com/t/98b78079f5ee4295c40260785b4e4fbf.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/98b78079f5ee4295c40260785b4e4fbf.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/98b78079f5ee4295c40260785b4e4fbf.svg#Cera Pro") format("svg"); 
+    src: url("//mishudev.xyz/assets/fonts/98b78079f5ee4295c40260785b4e4fbf.eot");
+    src: url("//mishudev.xyz/assets/fonts/98b78079f5ee4295c40260785b4e4fbf.eot?#iefix") format("embedded-opentype"),
+    url("//mishudev.xyz/assets/fonts/98b78079f5ee4295c40260785b4e4fbf.woff2") format("woff2"),
+    url("//mishudev.xyz/assets/fonts/98b78079f5ee4295c40260785b4e4fbf.woff") format("woff"),
+    url("//mishudev.xyz/assets/fonts/98b78079f5ee4295c40260785b4e4fbf.ttf") format("truetype");
     font-weight: 150;
     font-style: normal;
     font-display: block;
