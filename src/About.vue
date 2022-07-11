@@ -13,7 +13,7 @@
             </div>
             <div class="m-2">
     <div class="dc-bg discord-div w-[480px] h-28 flex justify-between items-center px-4 rounded-b-lg">
-        <div class="flex"><img width="78" draggable="false" class="rounded-xl icon" src="https://cdn.mishudev.xyz/millie.jpg" style="border-radius:25px;">
+        <div class="flex"><img width="78" draggable="false" class="rounded-xl icon" src="https://cdn.mishudev.xyz/t/fbda846d-2b29-419c-9bd5-0d2f25456751.jpg" style="border-radius:25px;">
             <div class="ml-3 mt-1">
                 <h1 class="font-bold name text-[25px]">eleven</h1>
                 <div><i class="fa fa-circle text-online text-xs mr-1 relative"></i><span class="text-xs members font-medium">0 Online</span><i class="fa fa-circle ml-3 text-offline text-xs mr-1 relative"></i><span class="text-xs topmembers font-medium">0 Members</span></div>
