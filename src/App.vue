@@ -1,4 +1,4 @@
-<template>
+""<template>
 <div class="main">
 <div class="preloader">
   <span class="loaderText">better soon</span>
@@ -30,7 +30,7 @@
       <div class="dc-bg pb-1 rounded-b-lg rounded-t-lg">
     <div>
         <div class="mb-3">
-            <div class="banner" style="height:136px;width:340px;border-radius:2%;background:url('https://cdn.mishudev.xyz/millie.jpg') center center no-repeat;background-size:contain;background-attachment:fixed;background-position:center;">
+            <div class="banner" style="height:136px;width:340px;border-radius:2%;background:url('https://cdn.mishudev.xyz/t/caedf367-9762-486b-a30f-c09f2f0d1dcf.gif') center center no-repeat;background-size:contain;background-attachment:fixed;background-position:center;">
                 <div class="mt-12 relative ml-4" style="padding-top:75px;">
                 <img class="discord_user_img bg-[#EEE8ED]" draggable="false" width="95" src="" alt="mishu avatar" style="border-radius:999%;">
                 </div>
