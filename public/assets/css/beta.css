@@ -1761,9 +1761,6 @@ html {
         padding-right: 1.5rem;
     }
 }
-.navbar {
-    backdrop-filter: blur(15px);
-}
 @media only screen and (min-width: 640px) {
 .padding {
     padding-left: 21%;
@@ -1910,7 +1907,6 @@ html {
     .modal-overlay.active {
       opacity: 1;
       visibility: visible;
-      backdrop-filter: blur(1.7px);
     }
   }
   .modal {
