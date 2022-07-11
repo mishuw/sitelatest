@@ -12,8 +12,8 @@ fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
             console.log(data)
             document.querySelector(".icon").src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon+'';
             document.querySelector('.name').innerText = data.guild.name.length > 14 ? data.guild.name.substring(0, 14) + "..." : data.guild.name;
-            document.querySelector(".members").innerText = data.approximate_presence_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+' <span class="onlinetext">Online</span>'
-            document.querySelector(".topmembers").innerText = data.approximate_member_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+' <span class="totalMemberText">Members</span>'
+            document.querySelector(".members").innerHTML = data.approximate_presence_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+' <span class="onlinetext">Online</span>'
+            document.querySelector(".topmembers").innerHTML = data.approximate_member_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+' <span class="totalMemberText">Members</span>'
             inviteBtn.addEventListener('click', () =>{
                 document.querySelector('.invite').innerText = 'Joined'
                 window.open('https://discord.com/invite/'+data.code, '_BLANK')
