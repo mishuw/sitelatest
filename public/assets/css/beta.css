@@ -1901,7 +1901,6 @@ html {
       left: 0;
       width: 100%;
       height: 100%;
-      backdrop-filter: blur(2px);
       z-index: 11;
       opacity: 0;
       visibility: hidden;
@@ -1911,6 +1910,7 @@ html {
     .modal-overlay.active {
       opacity: 1;
       visibility: visible;
+      filter: blur(5px);
     }
   }
   .modal {
