@@ -1910,7 +1910,7 @@ html {
     .modal-overlay.active {
       opacity: 1;
       visibility: visible;
-      filter: blur(5px);
+      backdrop-filter: blur(1.7px);
     }
   }
   .modal {
