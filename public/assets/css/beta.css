@@ -1977,6 +1977,12 @@ html {
     .eskeys{
         display: none;
     }
+    .onlinetext {
+	display: none;  
+    }
+    .totalMemberText {
+	display: none;  
+    }
   }
 .redirectbtn {
   border: 1px solid #f40612;
