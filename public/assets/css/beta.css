@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Impact";
     src: url("//cdn.mishudev.xyz/t/8030bb54-32fc-4a0e-9994-6c14cd863131.ttf");
-    url("//mishudev.xyz/assets/fonts/98b78079f5ee4295c40260785b4e4fbf.ttf") format("truetype");
+    src: url("//mishudev.xyz/assets/fonts/98b78079f5ee4295c40260785b4e4fbf.ttf") format("truetype");
     font-weight: 150;
     font-style: normal;
     font-display: block;
