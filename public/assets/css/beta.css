@@ -5,7 +5,10 @@
 }
 
 * {
-    font-family: 'Impact', sans-serif;
+    font-family: 'Impact';
+    font-style: normal;
+    font-display: block;
+    font-weight: 150;
 }
 
 :root {
